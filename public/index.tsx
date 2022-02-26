@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { LemonButton } from '../src/Components/LemonButton'
+import { LemonButton } from '../src'
 
 const App = () => (
   <>
-    <LemonButton icon='check' onClick={() => alert('Alerta do Lemon Button')}>Clique em mim</LemonButton>
+    <LemonButton color='secondary' onClick={() => alert('Alerta do Lemon Button')}>Clique em mim</LemonButton>
   </>
 )
 

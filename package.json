@@ -1,6 +1,6 @@
 {
   "name": "react-lemon-button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "button component for Lemon Energy Company",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,7 +17,8 @@
   "private": false,
   "scripts": {
     "dev": "webpack serve --open",
-    "build": "tsc"
+    "build": "tsc && yarn copy:assets",
+    "copy:assets": "cp -rv 'src/Components/LemonButton/icons' 'dist/Components/LemonButton/icons'"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
