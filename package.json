@@ -1,10 +1,14 @@
 {
   "name": "react-lemon-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "button component for Lemon Energy Company",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "author": "mouravocal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MouraVocal/react-lemon-button"
+  },
   "files": [
     "dist",
     "README.md"
@@ -13,7 +17,7 @@
   "private": false,
   "scripts": {
     "dev": "webpack serve --open",
-    "build": "cross-env NODE_ENV=production babel src --out-dir dist --extensions .ts,.tsx"
+    "build": "tsc"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -21,6 +25,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@svgr/webpack": "^6.2.1",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.23",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
@@ -42,6 +47,11 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.3"
