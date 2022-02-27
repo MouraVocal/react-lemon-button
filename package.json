@@ -1,9 +1,10 @@
 {
   "name": "react-lemon-button",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "button component for Lemon Energy Company",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "author": "mouravocal",
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
   "private": false,
   "scripts": {
     "dev": "webpack serve --open",
-    "build": "tsc && yarn copy:assets",
+    "build": "rollup --config",
+    "bundle": "yarn build && yarn pack",
     "copy:assets": "cp -rv 'src/Components/LemonButton/icons' 'dist/Components/LemonButton/icons'"
   },
   "devDependencies": {
@@ -26,6 +28,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-typescript": "^8.3.1",
     "@svgr/webpack": "^6.2.1",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.23",
@@ -41,6 +44,8 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.1",
     "html-webpack-plugin": "^5.5.0",
+    "rollup": "^2.68.0",
+    "rollup-plugin-svg": "^2.0.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.68.0",
@@ -50,7 +55,9 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.3.3"
+    "react-lemon-button": "./react-lemon-button-v1.0.2.tgz",
+    "styled-components": "^5.3.3",
+    "tslib": "^2.3.1"
   },
   "peerDependencies": {
     "react": "^17.0.2",
