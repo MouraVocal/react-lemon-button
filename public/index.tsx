@@ -4,7 +4,7 @@ import { LemonButton } from '../src'
 
 const App = () => (
   <>
-    <LemonButton disabled color='secondary' onClick={() => alert('Alerta do Lemon Button')}>Clique em mim</LemonButton>
+    <LemonButton color='secondary' onClick={() => alert('Alerta do Lemon Button')}>Clique em mim</LemonButton>
   </>
 )
 
